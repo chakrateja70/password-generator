@@ -27,7 +27,7 @@ function App() {
 const copyPasswordToClipboard = () => {
   window.navigator.clipboard.writeText(password)
   passwordRef.current?.select()
-  alert('Password Copied Successfully')
+  alert('Password Copied Successfully!')
 }
 
   useEffect(() => {generatePassword()}, [length, numberAllowed, charAllowed])
