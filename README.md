@@ -1,27 +1,29 @@
 # Password Generator
 
-A simple and responsive **Password Generator** web application built with **React** and **Vite**. It lets you instantly generate secure, random passwords and copy them to your clipboard with a single click.
+A simple and responsive **Password Generator** web application built with **React** and **Vite**. It lets you generate secure random passwords with customizable options and copy them to your clipboard with a single click.
 
 ## Features
 
-- 🔐 Generates a random password on load and on every setting change
-- 📏 Adjustable password length (9 – 40 characters) via a range slider
-- 🔢 Optional inclusion of numbers (0–9)
-- 🔣 Optional inclusion of special characters (`!@#$%^&*()_+`)
-- 📋 One-click **Copy to Clipboard** button
+- **Configurable length** – Slide the range input to choose a password length between 9 and 40 characters.
+- **Include numbers** – Toggle to add digits (0–9) to the character pool.
+- **Include special characters** – Toggle to add special characters (`!@#$%^&*()_+`) to the character pool.
+- **Auto-regenerate** – A new password is generated automatically whenever any option changes.
+- **Copy to clipboard** – Click the **Copy** button to copy the current password to your clipboard instantly.
 
 ## Tech Stack
 
-- [React 18](https://react.dev/) – UI library
-- [Vite 5](https://vitejs.dev/) – build tool & dev server
-- [ESLint](https://eslint.org/) – code linting
+| Tool | Purpose |
+|------|---------|
+| [React 18](https://react.dev/) | UI library |
+| [Vite 5](https://vitejs.dev/) | Build tool & dev server |
+| [ESLint](https://eslint.org/) | Code linting |
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js ≥ 18
-- npm ≥ 9
+- [Node.js](https://nodejs.org/) v18 or later
+- npm (comes with Node.js)
 
 ### Installation
 
@@ -51,9 +53,8 @@ npm run build
 
 The production-ready files will be in the `dist/` folder.
 
-### Preview the Production Build
-
 ```bash
+# Preview the production build locally
 npm run preview
 ```
 
@@ -63,10 +64,24 @@ npm run preview
 npm run lint
 ```
 
-## Usage
+## How It Works
 
-1. The app automatically generates a password when it loads.
-2. Use the **Length** slider to choose how long the password should be (9–40 characters).
-3. Check **Numbers** to include digits in the password.
-4. Check **Character** to include special characters (`!@#$%^&*()_+`) in the password.
-5. Click the **Copy** button to copy the generated password to your clipboard.
+1. A base character set of uppercase and lowercase letters is always included.
+2. Enabling **Numbers** appends `0123456789` to the character set.
+3. Enabling **Special Characters** appends `!@#$%^&*()_+` to the character set.
+4. A random password of the selected length is generated from the combined character set using `Math.random()`.
+5. The password field is read-only; use the **Copy** button to copy it to your clipboard.
+
+## Project Structure
+
+```
+password-generator/
+├── public/          # Static assets
+├── src/
+│   ├── App.css      # Component styles
+│   ├── App.jsx      # Main Password Generator component
+│   └── main.jsx     # React entry point
+├── index.html       # HTML template
+├── package.json
+└── vite.config.js
+```
