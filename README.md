@@ -28,11 +28,11 @@ A simple and responsive **Password Generator** web application built with **Reac
 ### Installation
 
 ```bash
-# 1. Clone the repository
+# Clone the repository
 git clone https://github.com/chakrateja70/password-generator.git
 cd password-generator
 
-# 2. Install dependencies
+# Install dependencies
 npm install
 ```
 
