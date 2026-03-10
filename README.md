@@ -16,7 +16,7 @@ A simple and responsive **Password Generator** web application built with **Reac
 |------|---------|
 | [React 18](https://react.dev/) | UI library |
 | [Vite 5](https://vitejs.dev/) | Build tool & dev server |
-| [ESLint](https://eslint.org/) | Code linting |
+| [ESLint](https://eslint.org/) | Code linting  and lint code
 
 ## Getting Started
 
