@@ -68,7 +68,7 @@ npm run lint
 
 1. A base character set of uppercase and lowercase letters is always included.
 2. Enabling **Numbers** appends `0123456789` to the character set.
-3. Enabling **Special Characters** appends `!@#$%^&*()_+` to the character set.
+3. Enabling **Special Characters** appends `!@#$%^&*` to the character set.
 4. A random password of the selected length is generated from the combined character set using `Math.random()`.
 5. The password field is read-only; use the **Copy** button to copy it to your clipboard.
 
